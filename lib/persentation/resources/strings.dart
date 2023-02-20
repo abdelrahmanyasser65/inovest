@@ -17,6 +17,7 @@ class Strings{
   static const google="Continue with Google";
   static const or="OR";
   static const signin="SIGN IN";
+
   static const notHave="Don't have an account?!  ";
   static const signup="Sign Up";
   //login
