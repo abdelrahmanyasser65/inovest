@@ -21,4 +21,17 @@ class Images{
   static const postImage1="$imagePath/fp1.jpg";
   static const postImage2="$imagePath/fp2.jpg";
   static const postImage4="$imagePath/fp4.jpg";
+
+  //ads
+  static const cat1="$imagePath/ads1.png";
+  static const cat2="$imagePath/ads2.png";
+  static const cat3="$imagePath/ads3.png";
+  static const cat4="$imagePath/ads4.png";
+  static const cat5="$imagePath/ads5.png";
+  static const product1="$imagePath/pr1.png";
+  static const product2="$imagePath/pr2.png";
+  static const product3="$imagePath/pr3.png";
+  static const product4="$imagePath/pr4.jpeg";
+  static const product5="$imagePath/pr5.png";
+  static const product6="$imagePath/pr6.png";
 }

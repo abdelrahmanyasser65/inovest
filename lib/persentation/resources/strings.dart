@@ -54,4 +54,23 @@ class Strings{
   CV can be sent to: abdelrahmanyasser3065@gmail.com
   Or via WhatsApp No: 01208965875""";
 
+  //ads
+  static const categories="Categories";
+  static const devices="Devices";
+  static const gadgets="Gadgets";
+  static const gaming="Gaming";
+  static const men="Men";
+  static const women="Women";
+  static const today="Today's picks";
+  static const pro1="Leather Wristwatch";
+  static const pro2="B&O Desk Lamp";
+  static const pro3="BeoPlay Speaker";
+  static const pro4="Iphone 14 pro";
+  static const pro5="BeoPlay Stand Speaker";
+  static const pro6="B&O Phone Case";
+  static const proD1="Tag heuer";
+  static const proD2="Bang and Olufsen";
+
+
+
 }
