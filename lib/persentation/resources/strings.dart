@@ -38,5 +38,20 @@ class Strings{
   static const market="Market";
   //feed
   static const topTen="Top 10 deals this month";
+  static const name1="ACACIA";
+  static const name2="Inovest";
+  static const name3="ARROW";
+  static const name4="BRAND";
+  static const date1="12 Dec";
+  static const date2="14 Dec";
+  static const date3="5 Dec";
+  static const date4 ="22 Dec";
+  static const desPost1="who are we ? We are ACACIA Company for agricultural products and our goal is to green the land";
+  static const desPost2="We would like to inform you of a new group of companies joining us in Inovest";
+  static const desPost3="We are very happy to complete the contracting deal with Talaat Mostafa Group of Companies";
+  static const desPost4="""We are hiring!!
+  We are looking for Mobile Developers to join our team
+  CV can be sent to: abdelrahmanyasser3065@gmail.com
+  Or via WhatsApp No: 01208965875""";
 
 }

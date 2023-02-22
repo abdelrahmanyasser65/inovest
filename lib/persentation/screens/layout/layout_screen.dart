@@ -51,7 +51,7 @@ class _AppLayoutState extends State<AppLayout> {
       bottomNavigationBar: CurvedNavigationBar(
         backgroundColor: Colors.transparent,
         buttonBackgroundColor: ColorManager.primary,
-        color: ColorManager.black.withOpacity(0.03),
+        color: ColorManager.white,
         height: 60,
         index: index,
         items: [

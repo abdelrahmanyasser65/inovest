@@ -13,5 +13,12 @@ class Images{
   //feed
   static const topDeals="$imagePath/topdeals.gif";
   static const profile="$imagePath/profile.jpeg";
-
+  static const medal="$imagePath/medal.gif";
+  static const profile1="$imagePath/ficon1.jpg";
+  static const profile2="$imagePath/ficon2.webp";
+  static const profile3="$imagePath/ficon3.jpg";
+  static const profile4="$imagePath/ficon4.jpg";
+  static const postImage1="$imagePath/fp1.jpg";
+  static const postImage2="$imagePath/fp2.jpg";
+  static const postImage4="$imagePath/fp4.jpg";
 }
