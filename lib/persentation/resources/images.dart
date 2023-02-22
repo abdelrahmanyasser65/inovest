@@ -10,4 +10,8 @@ class Images{
   //auth
   static const google="$imagePath/google.png";
   static const faceBook="$imagePath/facebook.png";
+  //feed
+  static const topDeals="$imagePath/topdeals.gif";
+  static const profile="$imagePath/profile.jpeg";
+
 }

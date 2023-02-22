@@ -3,6 +3,7 @@ import 'package:sizer/sizer.dart';
 class HeightSized{
   static double sh3=0.3.h;
   static double sh5=0.5.h;
+  static double sh8=0.8.h;
   static double s1=1.h;
   static double s2=2.h;
   static double s3=3.h;

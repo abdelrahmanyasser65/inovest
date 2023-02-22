@@ -30,4 +30,13 @@ class Strings{
   static const createAccount="Create an account to continue!";
   static const fullName="Full Name";
   static const phoneNumber="Phone Number";
+  //titles
+  static const feed ="Discussion Forums";
+  static const post ="Post";
+  static const inovest="Inovest";
+  static const deals="Deals";
+  static const market="Market";
+  //feed
+  static const topTen="Top 10 deals this month";
+
 }

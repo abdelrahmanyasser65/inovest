@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:inovest/persentation/screens/intro/splash_screen.dart';
+import 'package:inovest/persentation/screens/layout/layout_screen.dart';
 import 'package:sizer/sizer.dart';
 class MyApp extends StatefulWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -19,7 +20,7 @@ class _MyAppState extends State<MyApp> {
           theme: ThemeData(
             fontFamily: "Cairo"
           ),
-          home: SplashScreen(),
+          home: AppLayout(),
         );
       },
     );
