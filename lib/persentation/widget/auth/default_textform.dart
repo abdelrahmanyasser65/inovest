@@ -3,12 +3,15 @@ import 'package:inovest/persentation/resources/colors.dart';
 import 'package:inovest/persentation/resources/values.dart';
 class DefaultTextFormFiled extends StatelessWidget {
   const DefaultTextFormFiled({Key? key, required this.controller, required this.textInputType, required this.obscureText,
-    required this.prefixIcon, this.hint=''}) : super(key: key);
+     this.prefixIcon, this.hint='',this.maxLines,
+    this.isIcon=true}) : super(key: key);
   final TextEditingController controller;
   final TextInputType textInputType;
   final bool obscureText;
-  final IconData prefixIcon;
+  final IconData ?prefixIcon;
   final String hint;
+  final int ?maxLines;
+  final bool isIcon;
 
   @override
   Widget build(BuildContext context) {
@@ -22,11 +25,11 @@ class DefaultTextFormFiled extends StatelessWidget {
         controller:controller,
         keyboardType: textInputType,
         cursorColor: Colors.grey,
-        obscureText: obscureText,
+        obscureText: obscureText,maxLines: maxLines,
         decoration: InputDecoration(
 
-          prefixIcon: Icon(prefixIcon,
-            color: ColorManager.primary,),
+          prefixIcon:isIcon? Icon(prefixIcon,
+            color: ColorManager.primary,):null,
           // suffixIcon: controller.text.isNotEmpty?
           // Icon(Icons.verified_outlined,color: ColorManager.primary,)
           //     :null,

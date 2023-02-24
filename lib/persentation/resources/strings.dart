@@ -31,7 +31,7 @@ class Strings{
   static const fullName="Full Name";
   static const phoneNumber="Phone Number";
   //titles
-  static const feed ="Discussion Forums";
+  static const feed ="Discussion";
   static const post ="Post";
   static const inovest="Inovest";
   static const deals="Deals";
@@ -71,6 +71,49 @@ class Strings{
   static const proD1="Tag heuer";
   static const proD2="Bang and Olufsen";
 
+  //posts
+  static const addPost="Add a post to a discussion";
+  static const addDeal="Add a deal now";
+  static const addAds="Add ads now through the App";
+  static const title="Title";
+  static const description="Description";
+  static const addPhoto="Add Photo";
+  static const addPhotoP="Add a product photo";
+  static const proName="Product Name";
+  static const price ="price";
+  static const phone="phone Num";
+  static const hintPhone="Enter Your phone number";
+  static const hintEmail="Enter Your Email";
+  static const hintPrice="Enter the product price";
+  static const hintName="Enter your full name";
+  static const id="National ID";
+  static const hintId="Enter your National ID";
+  static const companyName="Company Name";
+  static const hintNameC="Enter your Company name";
+  static const industry="Your industry";
+  static const hintIndustry="Enter your company's industry";
+  static const financialS="Financial Statements";
+  static const hintFinancial="Enter your company's financial statement";
+  static const workPlan="workplan";
+  static const hintWorkPlan="Enter Your workplan";
+  static const marketingPlan="Marketing Plan";
+  static const hintMPlan="Enter your  marketing plan";
+  static const investPlan="Investment Plan";
+  static const hintInvest="Enter your investment plan";
+  static const offerD="Offer Details";
+  static const hintOffer="Enter your offer details";
+  static const finaValue="Financing value";
+  static const hintFianc="Enter the financing amount you want";
+  static const investRatio="Investment Ratio";
+  static const hintRatio="Enter the investment percentage";
+  static const addComment="Add Comment";
+  static const nationalIdP="Add Your National Id photo";
+  static const logoP="Add your company Logo";
+  static const commReg="Add your company's commercial register";
+  static const taxRep="Add company tax reports";
+  static const operatingPer="Add Company Operating permits";
+  static const legalD="Add company legal Documents";
+  static const legalType="(Company contracts, licenses, intellectual property rights and other contracts)";
 
 
 }

@@ -22,7 +22,7 @@ final List titles=[
 ];
 final List icons=[
   Icons.home_outlined,
-  Icons.post_add_sharp,
+  Icons.add_to_photos_rounded,
   Icons.wb_twighlight,
   Icons.library_add_check,
   Icons.shopping_cart
