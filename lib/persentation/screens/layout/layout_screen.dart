@@ -82,6 +82,22 @@ class _AppLayoutState extends State<AppLayout> {
                 ),
                 onTap: () {},
               ),
+              ListTile(
+                selected: false,
+                selectedColor: Colors.blueGrey,
+                selectedTileColor: Colors.black.withOpacity(0.2),
+                leading: Icon(
+                  Icons.notifications_active,
+                  color: Colors.black,
+                  size: 30,
+                ),
+                title: Text(
+                  'Alerts',
+                  style: TextStyle(
+                      fontSize: 15, fontWeight: FontWeight.bold),
+                ),
+                onTap: () {},
+              ),
             Expanded(
                 flex: 4,
                 child: SizedBox()),
