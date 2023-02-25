@@ -90,7 +90,7 @@ class Strings{
   static const hintId="Enter your National ID";
   static const companyName="Company Name";
   static const hintNameC="Enter your Company name";
-  static const industry="Your company's industry";
+  static const industry="company's industry";
   static const hintIndustry="Enter your company's industry";
   static const financialS="Financial Statements";
   static const hintFinancial="Enter your company's financial statement";
