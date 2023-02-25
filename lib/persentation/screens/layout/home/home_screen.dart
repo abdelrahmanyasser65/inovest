@@ -6,9 +6,9 @@ import 'package:inovest/persentation/resources/images.dart';
 import 'package:inovest/persentation/resources/strings.dart';
 import 'package:inovest/persentation/resources/values.dart';
 import 'package:inovest/persentation/screens/layout/home/details_screen.dart';
+import 'package:inovest/persentation/screens/layout/top10.dart';
 import 'package:inovest/persentation/widget/build_divider.dart';
 import 'package:inovest/persentation/widget/default_text.dart';
-import 'package:inovest/persentation/widget/layout/feed_icons.dart';
 import 'package:inovest/persentation/widget/navigator.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -28,8 +28,7 @@ class _HomeScreenState extends State<HomeScreen> {
           children: [
             InkWell(
               onTap: () {
-                //go to top ten deals
-                //
+                Navigators.navigateTo(context, Top10());
               },
               child: Container(
                 width: double.infinity,
