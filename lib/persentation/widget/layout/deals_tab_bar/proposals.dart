@@ -21,7 +21,10 @@ class _MyProposalsState extends State<MyProposals> {
     return Scaffold(
       body:  ListView.separated(
           physics: const BouncingScrollPhysics(),
-          padding: EdgeInsets.only(bottom: HeightSized.s9),
+          padding: EdgeInsets.only
+            (
+              top: HeightSized.s2,
+              bottom: HeightSized.s9),
           itemBuilder: (context, index) {
             return
               Container(
