@@ -29,6 +29,7 @@ class _HomeScreenState extends State<HomeScreen> {
             InkWell(
               onTap: () {
                 //go to top ten deals
+                //
               },
               child: Container(
                 width: double.infinity,
