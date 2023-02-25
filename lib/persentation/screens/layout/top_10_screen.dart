@@ -6,20 +6,18 @@ import 'package:inovest/persentation/resources/images.dart';
 import 'package:inovest/persentation/resources/strings.dart';
 import 'package:inovest/persentation/resources/values.dart';
 import 'package:inovest/persentation/screens/layout/home/details_screen.dart';
-import 'package:inovest/persentation/screens/layout/top_10_screen.dart';
 import 'package:inovest/persentation/widget/build_divider.dart';
 import 'package:inovest/persentation/widget/default_text.dart';
-import 'package:inovest/persentation/widget/layout/feed_icons.dart';
 import 'package:inovest/persentation/widget/navigator.dart';
 
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+class Top10 extends StatefulWidget {
+  const Top10({Key? key}) : super(key: key);
 
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
+  State<Top10> createState() => _Top10State();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _Top10State extends State<Top10> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,46 +25,12 @@ class _HomeScreenState extends State<HomeScreen> {
         physics: const BouncingScrollPhysics(),
         child: Column(
           children: [
-            InkWell(
-              onTap: () {
-                Navigators.navigateTo(context, Top10());
-              },
-              child: Container(
-                width: double.infinity,
-                margin: EdgeInsets.only(
-                  top: HeightSized.s2,
-                  left: HeightSized.s2,
-                  right: HeightSized.s2,
-                ),
-                decoration: const BoxDecoration(
-                    borderRadius: BorderRadius.only(
-                  bottomLeft: Radius.circular(25),
-                  bottomRight: Radius.circular(25),
-                )),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    DefaultText(
-                      text: Strings.startNowDeal,
-                      fontWeight: FontWeightManager.semiBold,
-                      fontSize: FontSized.fs16,
-                      color: ColorManager.textColor2,
-                    ),
-                    ClipRRect(
-                      borderRadius: BorderRadius.circular(25),
-                      child: Image.asset(
-                        Images.startInovest,
-                        height: HeightSized.s25,
-                        width: double.infinity,
-                        fit: BoxFit.cover,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ),
+            MDivider(
+                color: ColorManager.black,
+                height: HeightSized.sh3,
+                vertical: HeightSized.s1,
+                horizontal: 0),
             ListView.separated(
-              itemCount: 10,
                 shrinkWrap: true,
                 physics: const NeverScrollableScrollPhysics(),
                 padding: EdgeInsets.only(bottom: HeightSized.s9),
@@ -83,10 +47,10 @@ class _HomeScreenState extends State<HomeScreen> {
                       borderRadius: BorderRadius.circular(10),
                     ),
                     padding: EdgeInsets.only(
-                      right: HeightSized.s2,
-                      left: HeightSized.s2,
-                      top: HeightSized.s2,
-                      bottom: HeightSized.s1
+                        right: HeightSized.s2,
+                        left: HeightSized.s2,
+                        top: HeightSized.s2,
+                        bottom: HeightSized.s1
                     ),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.start,
@@ -95,7 +59,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         ClipRRect(
                           borderRadius: BorderRadius.circular(20),
                           child: Image.asset(
-                            deals[index%3].logo,
+                            deals[index].logo,
                             height: HeightSized.s20,
                             width: double.infinity,
                             fit: BoxFit.fitWidth,
@@ -110,7 +74,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 fontSize: FontSized.fs14,
                                 fontWeight: FontWeightManager.semiBold),
                             DefaultText(
-                                text: "  ${deals[index%3].companyName}",
+                                text: "  ${deals[index].companyName}",
                                 color: ColorManager.primary,
                                 fontSize: FontSized.fs14,
                                 fontWeight: FontWeightManager.bold),
@@ -126,7 +90,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 fontSize: FontSized.fs14,
                                 fontWeight: FontWeightManager.semiBold),
                             DefaultText(
-                                text: "  ${deals[index%3].industry}",
+                                text: "  ${deals[index].industry}",
                                 color: ColorManager.primary,
                                 fontSize: FontSized.fs14,
                                 fontWeight: FontWeightManager.bold),
@@ -142,14 +106,14 @@ class _HomeScreenState extends State<HomeScreen> {
                                     text: Strings.dollar,
                                     style: buildTextStyle1()),
                                 TextSpan(
-                                  text: " ${deals[index%3].val} ",
+                                  text: " ${deals[index].val} ",
                                   style: buildTextStyle2(),
                                 ),
                                 TextSpan(
                                     text: Strings.forA,
                                     style: buildTextStyle1()),
                                 TextSpan(
-                                  text: " ${deals[index%3].percent} ",
+                                  text: " ${deals[index].percent} ",
                                   style: buildTextStyle2(),
                                 ),
                                 TextSpan(
@@ -169,7 +133,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   color: ColorManager.primary,
                                   fontSize: FontSized.fs14,
                                   fontWeight: FontWeightManager.semiBold),
-                            const  Spacer(),
+                              const  Spacer(),
                               Icon(Icons.arrow_forward_ios_sharp,color: ColorManager.primary,)
                             ],
                           ),
@@ -183,7 +147,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     height: HeightSized.s1,
                   );
                 },
-                )
+                itemCount: deals.length)
           ],
         ),
       ),
