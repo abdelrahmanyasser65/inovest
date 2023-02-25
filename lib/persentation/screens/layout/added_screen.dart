@@ -18,11 +18,10 @@ class _AddedScreenState extends State<AddedScreen> {
     return DefaultTabController(
       length: 3,
       child: Scaffold(
-        backgroundColor: ColorManager.white,
         appBar: AppBar(
           elevation: 0,
           toolbarHeight: HeightSized.s2,
-          backgroundColor: ColorManager.white,
+          backgroundColor: Colors.transparent,
          bottom: TabBar(
            indicatorColor: ColorManager.primary,
            labelColor: ColorManager.primary,

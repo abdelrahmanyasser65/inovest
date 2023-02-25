@@ -20,7 +20,7 @@ class _AppLayoutState extends State<AppLayout> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: ColorManager.white,
+        backgroundColor: Colors.transparent,
         elevation: 0,
         centerTitle: true,
      title:

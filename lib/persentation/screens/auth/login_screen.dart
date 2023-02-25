@@ -4,9 +4,11 @@ import 'package:inovest/persentation/resources/fonts.dart';
 import 'package:inovest/persentation/resources/images.dart';
 import 'package:inovest/persentation/resources/strings.dart';
 import 'package:inovest/persentation/resources/values.dart';
+import 'package:inovest/persentation/screens/layout/layout_screen.dart';
 import 'package:inovest/persentation/widget/auth/default_textform.dart';
 import 'package:inovest/persentation/widget/default_button.dart';
 import 'package:inovest/persentation/widget/default_text.dart';
+import 'package:inovest/persentation/widget/navigator.dart';
 
 class LoginScreen extends StatelessWidget {
    LoginScreen({Key? key}) : super(key: key);
@@ -77,12 +79,13 @@ final  TextEditingController email=TextEditingController();
                     controller:password,
                     textInputType: TextInputType.visiblePassword,
                     obscureText: true,
+                    maxLines: 1,
                     prefixIcon: Icons.lock),
                 SizedBox(height: HeightSized.s4),
                 DefaultButton(
                   text:Strings.signin,
                   onPressed: () {
-
+Navigators.navigateTo(context, AppLayout());
                   },
                   color: ColorManager.primary,
                 ),

@@ -102,12 +102,14 @@ class SignUpScreen extends StatelessWidget {
                     text:Strings.password,
                     color: ColorManager.textColor1,
                     fontSize: FontSized.fs16,
-                    fontWeight: FontWeightManager.medium),
+                    fontWeight: FontWeightManager.medium,),
                 DefaultTextFormFiled(
                     controller:password,
                     textInputType: TextInputType.visiblePassword,
                     obscureText: true,
-                    prefixIcon: Icons.lock),
+                    prefixIcon: Icons.lock,
+                maxLines: 1,
+                ),
                 SizedBox(height: HeightSized.s2),
                 DefaultButton(text:Strings.signin,
                   onPressed: () {

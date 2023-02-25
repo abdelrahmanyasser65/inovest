@@ -18,9 +18,11 @@ class _MyAppState extends State<MyApp> {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
           theme: ThemeData(
+            //useMaterial3: true,
             fontFamily: "Cairo"
           ),
-          home: AppLayout(),
+          home: SplashScreen()
+          //AppLayout(),
         );
       },
     );

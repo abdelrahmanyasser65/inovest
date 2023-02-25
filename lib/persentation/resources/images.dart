@@ -34,4 +34,8 @@ class Images{
   static const product4="$imagePath/pr4.jpeg";
   static const product5="$imagePath/pr5.png";
   static const product6="$imagePath/pr6.png";
+
+  //inovest
+  static const startInovest="$imagePath/inov.gif";
+  static const profile5="$imagePath/dee3.jpg";
 }

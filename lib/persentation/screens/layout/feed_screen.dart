@@ -8,7 +8,7 @@ import 'package:inovest/persentation/resources/values.dart';
 import 'package:inovest/persentation/widget/build_divider.dart';
 import 'package:inovest/persentation/widget/default_text.dart';
 import 'package:inovest/persentation/widget/layout/feed_icons.dart';
-import 'package:sizer/sizer.dart';
+
 class FeedScreen extends StatefulWidget {
   const FeedScreen({Key? key}) : super(key: key);
 
@@ -20,7 +20,7 @@ class _FeedScreenState extends State<FeedScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-       backgroundColor: ColorManager.white,
+
       body: SingleChildScrollView(
         physics:const BouncingScrollPhysics(),
         child: Column(

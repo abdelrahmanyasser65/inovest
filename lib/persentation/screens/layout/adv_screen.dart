@@ -18,7 +18,6 @@ class _AdvScreenState extends State<AdvScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: ColorManager.white,
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

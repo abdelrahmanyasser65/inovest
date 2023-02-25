@@ -26,6 +26,7 @@ class HeightSized{
   static double s30=30.h;
   static double s40=40.h;
   static double s45=45.h;
+  static double s46=46.h;
   static double s50=50.h;
   static double s60=60.h;
   static double s70=70.h;

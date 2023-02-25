@@ -90,7 +90,7 @@ class Strings{
   static const hintId="Enter your National ID";
   static const companyName="Company Name";
   static const hintNameC="Enter your Company name";
-  static const industry="Your industry";
+  static const industry="Your company's industry";
   static const hintIndustry="Enter your company's industry";
   static const financialS="Financial Statements";
   static const hintFinancial="Enter your company's financial statement";
@@ -115,5 +115,13 @@ class Strings{
   static const legalD="Add company legal Documents";
   static const legalType="(Company contracts, licenses, intellectual property rights and other contracts)";
 
-
+  //inovest
+  static const startNowDeal="Start your investment now, choose the best deal for you ";
+  static const indus1="Agriculture";
+  static const indus2="Technology";
+  static const indus3="Clothes";
+  static const dollar="\$";
+  static const forA="k for a";
+  static const stake="% Stake";
+  static const moreDe="More Details";
 }
