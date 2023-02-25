@@ -19,6 +19,107 @@ class _AppLayoutState extends State<AppLayout> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: Drawer(
+          child: Column(
+            children: [
+              Container(
+                width: double.infinity,
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                      colors: [Color(0xff004e70), Color(0xff349dcb)],
+                      begin: Alignment.bottomLeft,
+                      end: Alignment.topRight),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.only(
+                      top: 25, bottom: 10),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      CircleAvatar(
+                        radius: 50,
+                      backgroundImage: AssetImage(Images.profile,)
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 8.0),
+                        child: Text(
+                          'Osama Mosa',
+                          style: TextStyle(
+                              fontSize: 20,
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold),
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(left: 8),
+                        child:
+                          Text(
+                            'osama@gmail.com ',
+                            style: TextStyle(
+                                fontSize: 15,
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold),
+                          ),
+
+                      )
+                    ],
+                  ),
+                ),
+              ),
+              ListTile(
+                selected: true,
+                selectedColor: Colors.blueGrey,
+                selectedTileColor: Colors.black.withOpacity(0.2),
+                leading: Icon(
+                  Icons.home,
+                  color: Colors.blueGrey,
+                  size: 30,
+                ),
+                title: Text(
+                  'Home',
+                  style: TextStyle(
+                      fontSize: 15, fontWeight: FontWeight.bold),
+                ),
+                onTap: () {},
+              ),
+            Expanded(
+                flex: 4,
+                child: SizedBox()),
+              Divider(
+                height: 5,
+                thickness: 3,
+                color: Colors.black,
+              ),
+              ListTile(
+                leading: Icon(
+                  Icons.help_outline,
+                  size: 30,
+                ),
+                title: const Text(
+                  'Help & feedback',
+                  style: TextStyle(
+                      fontSize: 15, fontWeight: FontWeight.bold),
+                ),
+              ),
+              ListTile(
+                leading: Icon(
+                  Icons.logout,
+                  size: 30,
+                ),
+                title: Text(
+                  'log out',
+                  style: TextStyle(
+                      fontSize: 15, fontWeight: FontWeight.bold),
+                ),
+                onTap: () {
+
+                },
+              ),
+              Expanded(
+                  flex: 1,
+                  child: SizedBox()),
+            ],
+          )),
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
@@ -29,20 +130,27 @@ class _AppLayoutState extends State<AppLayout> {
             color: ColorManager.primary,
             fontSize: FontSized.fs20,
             fontWeight: FontWeightManager.bold),
-        leading: InkWell(
-          onTap: (){
+        leading: Builder(
+          builder: (context){
+            return   InkWell(
+              onTap: (){
+                Scaffold.of(context)
+                    .openDrawer();
+              },
+              child: Container(
+                margin: EdgeInsets.symmetric(
+                    horizontal: HeightSized.s1
+                ),
 
-          },
-          child: Container(
-            margin: EdgeInsets.symmetric(
-              horizontal: HeightSized.s1
-            ),
+                decoration:const BoxDecoration(
+                    shape: BoxShape.circle,
+                    image: DecorationImage(image:AssetImage(Images.profile,),fit: BoxFit.cover)
+                ),
+              ),
+            );
+          }
 
-            decoration:const BoxDecoration(
-              shape: BoxShape.circle,
-              image: DecorationImage(image:AssetImage(Images.profile,),fit: BoxFit.cover)
-            ),
-          ),
+
         ),
 
       ),
