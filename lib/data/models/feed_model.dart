@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:inovest/persentation/resources/images.dart';
 import 'package:inovest/persentation/resources/strings.dart';
 
@@ -51,4 +52,22 @@ List <Post>posts=[
       "22",
       "43",
       "3"),
+];
+
+List drawerString=[
+
+  "Profile",
+  "notifications",
+  "Message",
+  "Language",
+  "Help & feedback",
+  "Logout",
+];
+List<IconData> drawerIcons = [
+  Icons.person,
+  Icons.notifications,
+  Icons.message,
+  Icons.language,
+  Icons.question_mark_outlined,
+  Icons.logout,
 ];

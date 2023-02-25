@@ -114,7 +114,7 @@ class Strings{
   static const operatingPer="Add Company Operating permits";
   static const legalD="Add company legal Documents";
   static const legalType="(Company contracts, licenses, intellectual property rights and other contracts)";
-
+static const userName="Abdelrahman Yasser";
   //inovest
   static const startNowDeal="Start your investment now, choose the best deal for you ";
   static const indus1="Agriculture";

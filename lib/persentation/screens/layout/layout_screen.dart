@@ -1,9 +1,11 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:inovest/data/models/feed_model.dart';
 import 'package:inovest/data/models/layout_model.dart';
 import 'package:inovest/persentation/resources/colors.dart';
 import 'package:inovest/persentation/resources/fonts.dart';
 import 'package:inovest/persentation/resources/images.dart';
+import 'package:inovest/persentation/resources/strings.dart';
 import 'package:inovest/persentation/resources/values.dart';
 import 'package:inovest/persentation/widget/default_text.dart';
 import 'package:sizer/sizer.dart';
@@ -20,121 +22,71 @@ class _AppLayoutState extends State<AppLayout> {
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: Drawer(
-          child: Column(
-            children: [
-              Container(
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                      colors: [Color(0xff004e70), Color(0xff349dcb)],
-                      begin: Alignment.bottomLeft,
-                      end: Alignment.topRight),
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.only(
-                      top: 25, bottom: 10),
+
+          child: SingleChildScrollView(
+            physics: const BouncingScrollPhysics(),
+            child: Column(
+              children: [
+                Container(
+                  padding: EdgeInsets.only(top: HeightSized.s6),
+                  height: 33.h,
+                  color: ColorManager.primary,
                   child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      CircleAvatar(
-                        radius: 50,
-                      backgroundImage: AssetImage(Images.profile,)
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(left: 8.0),
-                        child: Text(
-                          'Osama Mosa',
-                          style: TextStyle(
-                              fontSize: 20,
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold),
+                      Container(
+                        height: 14.h,
+
+                        margin: EdgeInsets.symmetric(
+                            horizontal: HeightSized.s1
+                        ),
+
+                        decoration:const BoxDecoration(
+                            shape: BoxShape.circle,
+                            image: DecorationImage(image:AssetImage(Images.profile,),
+
+                            )
                         ),
                       ),
-                      Padding(
-                        padding: EdgeInsets.only(left: 8),
-                        child:
-                          Text(
-                            'osama@gmail.com ',
-                            style: TextStyle(
-                                fontSize: 15,
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold),
-                          ),
-
-                      )
+                      Text(
+                        Strings.userName,
+                        style: TextStyle(
+                          fontSize: FontSized.fs18,
+                          fontWeight: FontWeightManager.bold,
+                          color: ColorManager.white,
+                        ),
+                      ),
+                      Text(
+                        "abdelrahmanyasser3065@gmail.com",
+                        style: TextStyle(
+                            color: ColorManager.white,
+                            fontWeight: FontWeightManager.medium),
+                      ),
                     ],
                   ),
                 ),
-              ),
-              ListTile(
-                selected: true,
-                selectedColor: Colors.blueGrey,
-                selectedTileColor: Colors.black.withOpacity(0.2),
-                leading: Icon(
-                  Icons.home,
-                  color: Colors.blueGrey,
-                  size: 30,
-                ),
-                title: Text(
-                  'Home',
-                  style: TextStyle(
-                      fontSize: 15, fontWeight: FontWeight.bold),
-                ),
-                onTap: () {},
-              ),
-              ListTile(
-                selected: false,
-                selectedColor: Colors.blueGrey,
-                selectedTileColor: Colors.black.withOpacity(0.2),
-                leading: Icon(
-                  Icons.notifications_active,
-                  color: Colors.black,
-                  size: 30,
-                ),
-                title: Text(
-                  'Alerts',
-                  style: TextStyle(
-                      fontSize: 15, fontWeight: FontWeight.bold),
-                ),
-                onTap: () {},
-              ),
-            Expanded(
-                flex: 4,
-                child: SizedBox()),
-              Divider(
-                height: 5,
-                thickness: 3,
-                color: Colors.black,
-              ),
-              ListTile(
-                leading: Icon(
-                  Icons.help_outline,
-                  size: 30,
-                ),
-                title: const Text(
-                  'Help & feedback',
-                  style: TextStyle(
-                      fontSize: 15, fontWeight: FontWeight.bold),
-                ),
-              ),
-              ListTile(
-                leading: Icon(
-                  Icons.logout,
-                  size: 30,
-                ),
-                title: Text(
-                  'log out',
-                  style: TextStyle(
-                      fontSize: 15, fontWeight: FontWeight.bold),
-                ),
-                onTap: () {
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: HeightSized.s1),
+                  child: ListView.builder(
+                    shrinkWrap: true,
+                    physics: const NeverScrollableScrollPhysics(),
+                    itemBuilder: (context, index) => GestureDetector(
+                      onTap: () {
 
-                },
-              ),
-              Expanded(
-                  flex: 1,
-                  child: SizedBox()),
-            ],
+                      },
+                      child: ListTile(
+                        leading: Icon(drawerIcons[index],color: ColorManager.primary,),
+                        title: Text(drawerString[index],style: TextStyle(
+                          fontSize: FontSized.fs14,
+                          fontWeight: FontWeightManager.medium
+                        ),),
+                      ),
+                    ),
+                    itemCount: drawerString.length,
+                  ),
+                ),
+              ],
+            ),
           )),
       appBar: AppBar(
         backgroundColor: Colors.transparent,

@@ -18,8 +18,8 @@ class _DealsScreenState extends State<DealsScreen> {
       backgroundColor: ColorManager.white,
       appBar: AppBar(
         elevation: 0,
-        toolbarHeight: HeightSized.s2,
         backgroundColor: Colors.transparent,
+        toolbarHeight: HeightSized.s2,
         bottom: TabBar(
           indicatorColor: ColorManager.primary,
           labelColor: ColorManager.primary,
@@ -33,13 +33,13 @@ class _DealsScreenState extends State<DealsScreen> {
             fontWeight: FontWeightManager.medium,
           ),
           tabs: [
-            Tab(icon: Icon(Icons.request_page,size: HeightSized.s3,),text: 'proposals',),
+            Tab(icon: Icon(Icons.request_page,size: HeightSized.s3,),text: 'Your offers',),
             Tab(icon: Icon(Icons.local_offer_outlined,size: HeightSized.s3,),text: 'offers',),
           ],
         ),
       ),
-      body:  TabBarView(
-        physics:const BouncingScrollPhysics(),
+      body:  const TabBarView(
+        physics: BouncingScrollPhysics(),
         children: [
           MyProposals(),
           MyOffers()

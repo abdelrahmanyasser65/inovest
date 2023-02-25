@@ -17,84 +17,103 @@ class _MyOffersState extends State<MyOffers> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SingleChildScrollView(
-        physics: const BouncingScrollPhysics(),
-        child: Column(
-          children: [
-            MDivider(
-                color: ColorManager.black,
-                height: HeightSized.sh3,
-                vertical: HeightSized.s1,
-                horizontal: 0),
-            ListView.separated(
-                shrinkWrap: true,
-                physics: const NeverScrollableScrollPhysics(),
-                padding: EdgeInsets.only(bottom: HeightSized.s9),
-                itemBuilder: (context, index) {
-                  return InkWell(
-                    onTap: (){
-
-                    },
-                    child: Container(
-                      width: double.infinity,
-                      margin: EdgeInsets.symmetric(
-                        vertical: HeightSized.s1,
-                        horizontal: HeightSized.s2,
-                      ),
-                      height: HeightSized.s14,
-                      decoration: BoxDecoration(
-                        color: ColorManager.black.withOpacity(0.05),
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      padding: EdgeInsets.only(
-                          right: HeightSized.s2,
-                          left: HeightSized.s2,
-                      ),
-                      child:
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Row(
-                                children: [
-                                  DefaultText(text: 'offer from :', color: Colors.black, fontSize: FontSized.fs8, fontWeight: FontWeight.normal),
-                                  DefaultText(text: 'Mr Mohamed ', color: Colors.black, fontSize: FontSized.fs10, fontWeight: FontWeight.bold)
-                                ],
-                              ),
-                              SizedBox(height: HeightSized.s1,),
-                              Row(
-                                children: [
-                                  DefaultText(text: 'project title :', color: Colors.black, fontSize: FontSized.fs8, fontWeight: FontWeight.normal),
-                                  DefaultText(text: 'Crazy farm ', color: Colors.black, fontSize: FontSized.fs10, fontWeight: FontWeight.bold)
-                                ],
-                              ),
-                              SizedBox(height: HeightSized.s1,),
-                              Row(
-                                children: [
-                                  DefaultText(text: 'the offer:', color: Colors.black, fontSize: FontSized.fs10, fontWeight: FontWeight.normal),
-                                  DefaultText(text: '50000\$ for 30% ', color: Colors.black, fontSize: FontSized.fs10, fontWeight: FontWeight.bold)
-                                ],
-                              )
-                            ],
-                          ),
-                          DefaultText(text: 'Details', color: Colors.blue, fontSize: FontSized.fs14, fontWeight: FontWeight.bold),
-                          Icon(Icons.arrow_forward_ios_rounded)
-                        ],
-                      ),
+      body: ListView.separated(
+          physics: const BouncingScrollPhysics(),
+          padding: EdgeInsets.symmetric(
+            vertical: HeightSized.s2,
+          ),
+          itemBuilder: (context, index) {
+            return InkWell(
+              onTap: () {},
+              child: Container(
+                width: double.infinity,
+                margin: EdgeInsets.symmetric(
+                  vertical: HeightSized.s1,
+                  horizontal: HeightSized.s2,
+                ),
+                height: HeightSized.s14,
+                decoration: BoxDecoration(
+                  color: ColorManager.black.withOpacity(0.05),
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                padding: EdgeInsets.only(
+                  right: HeightSized.s2,
+                  left: HeightSized.s2,
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Row(
+                          children: [
+                            DefaultText(
+                                text: 'offer from :',
+                                color: ColorManager.textColor,
+                                fontSize: FontSized.fs12,
+                                fontWeight: FontWeightManager.semiBold),
+                            DefaultText(
+                                text: 'Mr Mohamed ',
+                                color: ColorManager.primary,
+                                fontSize: FontSized.fs12,
+                                fontWeight: FontWeightManager.semiBold)
+                          ],
+                        ),
+                        SizedBox(
+                          height: HeightSized.s1,
+                        ),
+                        Row(
+                          children: [
+                            DefaultText(
+                                text: 'project title :',
+                                color: ColorManager.textColor,
+                                fontSize: FontSized.fs12,
+                                fontWeight: FontWeightManager.semiBold),
+                            DefaultText(
+                                text: 'Crazy farm ',
+                                color: ColorManager.primary,
+                                fontSize: FontSized.fs12,
+                                fontWeight: FontWeightManager.semiBold)
+                          ],
+                        ),
+                        SizedBox(
+                          height: HeightSized.s1,
+                        ),
+                        Row(
+                          children: [
+                            DefaultText(
+                                text: 'the offer:',
+                                color: ColorManager.textColor,
+                                fontSize: FontSized.fs12,
+                                fontWeight: FontWeightManager.semiBold),
+                            DefaultText(
+                                text: '50000\$ for 30% ',
+                                color: ColorManager.primary,
+                                fontSize: FontSized.fs12,
+                                fontWeight: FontWeightManager.semiBold)
+                          ],
+                        )
+                      ],
                     ),
-                  );
-                },
-                separatorBuilder: (context, index) {
-                  return SizedBox(
-                    height: HeightSized.s1,
-                  );
-                },
-                itemCount: deals.length)
-          ],
-        ),
-      ),
+                    DefaultText(
+                        text: 'Details',
+                        color: ColorManager.primary,
+                        fontSize: FontSized.fs14,
+                        fontWeight: FontWeight.bold),
+                    Icon(Icons.arrow_forward_ios_rounded,color: ColorManager.primary,)
+                  ],
+                ),
+              ),
+            );
+          },
+          separatorBuilder: (context, index) {
+            return SizedBox(
+              height: HeightSized.s1,
+            );
+          },
+          itemCount: deals.length),
     );
   }
 

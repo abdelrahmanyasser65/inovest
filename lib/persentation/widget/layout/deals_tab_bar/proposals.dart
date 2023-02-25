@@ -19,127 +19,116 @@ class _MyProposalsState extends State<MyProposals> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SingleChildScrollView(
-        physics: const BouncingScrollPhysics(),
-        child: Column(
-          children: [
-
-            MDivider(
-                color: ColorManager.black,
-                height: HeightSized.sh3,
-                vertical: HeightSized.s1,
-                horizontal: 0),
-            ListView.separated(
-                shrinkWrap: true,
-                physics: const NeverScrollableScrollPhysics(),
-                padding: EdgeInsets.only(bottom: HeightSized.s9),
-                itemBuilder: (context, index) {
-                  return
-                    Container(
-                    width: double.infinity,
-                    margin: EdgeInsets.symmetric(
-                      vertical: HeightSized.s1,
-                      horizontal: HeightSized.s2,
-                    ),
-                    height: HeightSized.s20,
-                    decoration: BoxDecoration(
-                      color: ColorManager.black.withOpacity(0.05),
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                    padding: EdgeInsets.only(
-                        right: HeightSized.s2,
-                        left: HeightSized.s2,
-                        top: HeightSized.s2,
-                        bottom: HeightSized.s1
-                    ),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.start,
+      body:  ListView.separated(
+          physics: const BouncingScrollPhysics(),
+          padding: EdgeInsets.only(bottom: HeightSized.s9),
+          itemBuilder: (context, index) {
+            return
+              Container(
+                width: double.infinity,
+                margin: EdgeInsets.symmetric(
+                  vertical: HeightSized.s1,
+                  horizontal: HeightSized.s2,
+                ),
+                height: HeightSized.s20,
+                decoration: BoxDecoration(
+                  color: ColorManager.black.withOpacity(0.05),
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                padding: EdgeInsets.only(
+                    right: HeightSized.s2,
+                    left: HeightSized.s2,
+                    top: HeightSized.s2,
+                    bottom: HeightSized.s1
+                ),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
                       children: [
-                        Row(
+                        ClipRRect(
+                          borderRadius: BorderRadius.circular(20),
+                          child: Image.asset(
+                            deals[index].logo,
+                            height: HeightSized.s10,
+                            width: MediaQuery.of(context).size.width*0.2,
+                            fit: BoxFit.fitWidth,
+                          ),
+                        ),
+                        SizedBox(width: 15,),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            ClipRRect(
-                              borderRadius: BorderRadius.circular(20),
-                              child: Image.asset(
-                                deals[index].logo,
-                                height: HeightSized.s10,
-                                width: MediaQuery.of(context).size.width*0.2,
-                                fit: BoxFit.fitWidth,
-                              ),
-                            ),
-                            SizedBox(width: 15,),
-                            Column(
+                            Row(
                               children: [
-                              Row(
-                                children: [
-                                  DefaultText(
-                                      text: "${Strings.companyName}:",
-                                      color: ColorManager.textColor,
-                                      fontSize: FontSized.fs8,
-                                      fontWeight: FontWeightManager.semiBold),
-                                  DefaultText(
-                                      text: "  ${deals[index].companyName}",
-                                      color: ColorManager.primary,
-                                      fontSize: FontSized.fs8,
-                                      fontWeight: FontWeightManager.bold),
-                                ],
-                              ),
-                              Row(
-                                  mainAxisAlignment: MainAxisAlignment.end,
-                                  children: [
-                                    DefaultText(
-                                        text: "${Strings.industry}:",
-                                        color: ColorManager.textColor,
-                                        fontSize: FontSized.fs8,
-                                        fontWeight: FontWeightManager.bold),
-                                    DefaultText(
-                                        text: "  ${deals[index].industry}",
-                                        color: ColorManager.primary,
-                                        fontSize: FontSized.fs8,
-                                        fontWeight: FontWeightManager.bold),
+                                DefaultText(
+                                    text: "${Strings.companyName}:",
+                                    color: ColorManager.textColor,
+                                    fontSize: FontSized.fs12,
+                                    fontWeight: FontWeightManager.semiBold),
+                                SizedBox(height: HeightSized.s2,),
+                                DefaultText(
+                                    text: "  ${deals[index].companyName}",
+                                    color: ColorManager.primary,
+                                    fontSize: FontSized.fs12,
+                                    fontWeight: FontWeightManager.bold),
+                              ],
+                            ),
+                            SizedBox(height: HeightSized.s1,),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              children: [
+                                DefaultText(
+                                    text: "${Strings.industry}:",
+                                    color: ColorManager.textColor,
+                                    fontSize: FontSized.fs12,
+                                    fontWeight: FontWeightManager.semiBold),
+                                DefaultText(
+                                    text: "  ${deals[index].industry}",
+                                    color: ColorManager.primary,
+                                    fontSize: FontSized.fs12,
+                                    fontWeight: FontWeightManager.bold),
 
-
-                                  ],
-                                ),
 
                               ],
                             ),
 
-
                           ],
                         ),
 
-                        //industry
-                        SizedBox(height: HeightSized.s2),
-                        InkWell(
-                          onTap: (){
-                            //to details screen
-                          },
-                          child: Row(
-                            children: [
-                              DefaultText(
-                                  text: 'view my offer',
-                                  color: ColorManager.primary,
-                                  fontSize: FontSized.fs14,
-                                  fontWeight: FontWeightManager.semiBold),
-                              const  Spacer(),
-                              Icon(Icons.arrow_forward_ios_sharp,color: ColorManager.primary,)
-                            ],
-                          ),
-                        ),
+
                       ],
                     ),
-                  );
-                },
-                separatorBuilder: (context, index) {
-                  return SizedBox(
-                    height: HeightSized.s1,
-                  );
-                },
-                itemCount: deals.length)
-          ],
-        ),
-      ),
+
+                    //industry
+                    SizedBox(height: HeightSized.s2),
+                    InkWell(
+                      onTap: (){
+                        //to details screen
+                      },
+                      child: Row(
+                        children: [
+                          DefaultText(
+                              text: 'view my offer',
+                              color: ColorManager.primary,
+                              fontSize: FontSized.fs14,
+                              fontWeight: FontWeightManager.semiBold),
+                          const  Spacer(),
+                          Icon(Icons.arrow_forward_ios_sharp,color: ColorManager.primary,)
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              );
+          },
+          separatorBuilder: (context, index) {
+            return SizedBox(
+              height: HeightSized.s1,
+            );
+          },
+          itemCount: deals.length)
     );
   }
 
