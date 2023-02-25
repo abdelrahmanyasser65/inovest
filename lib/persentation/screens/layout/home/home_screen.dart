@@ -28,7 +28,6 @@ class _HomeScreenState extends State<HomeScreen> {
           children: [
             InkWell(
               onTap: () {
-                Navigators.navigateTo(context, Top10());
               },
               child: Container(
                 width: double.infinity,

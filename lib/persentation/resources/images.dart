@@ -43,4 +43,12 @@ class Images{
   static const dImage3="$imagePath/simage3.png";
   static const dImage4="$imagePath/simage4.jpg";
   static const dImage5="$imagePath/simage5.webp";
+
+  //top ten
+ static const top1='assets/images/startup8.jfif';
+ static const top2='assets/images/startup0.jfif';
+ static const top3='assets/images/startup1.jfif';
+ static const top4='assets/images/startup4.jfif';
+ static const top5='assets/images/startup7.jfif';
+
 }
