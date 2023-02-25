@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:inovest/data/models/deals_model.dart';
-import 'package:inovest/data/models/feed_model.dart';
 import 'package:inovest/persentation/resources/colors.dart';
 import 'package:inovest/persentation/resources/fonts.dart';
 import 'package:inovest/persentation/resources/images.dart';
 import 'package:inovest/persentation/resources/strings.dart';
 import 'package:inovest/persentation/resources/values.dart';
+import 'package:inovest/persentation/screens/layout/home/details_screen.dart';
 import 'package:inovest/persentation/widget/build_divider.dart';
 import 'package:inovest/persentation/widget/default_text.dart';
 import 'package:inovest/persentation/widget/layout/feed_icons.dart';
+import 'package:inovest/persentation/widget/navigator.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -162,7 +163,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         SizedBox(height: HeightSized.s2),
                         InkWell(
                           onTap: (){
-                            //to details screen
+                            Navigators.navigateTo(context, DetailsScreen());
                           },
                           child: Row(
                             children: [

@@ -38,4 +38,9 @@ class Images{
   //inovest
   static const startInovest="$imagePath/inov.gif";
   static const profile5="$imagePath/dee3.jpg";
+  static const dImage1="$imagePath/simage1.jpg";
+  static const dImage2="$imagePath/simage2.png";
+  static const dImage3="$imagePath/simage3.png";
+  static const dImage4="$imagePath/simage4.jpg";
+  static const dImage5="$imagePath/simage5.webp";
 }

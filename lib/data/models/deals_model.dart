@@ -20,3 +20,16 @@ List<DealsModel> deals = [
       ,Strings.indus3,540.0,32.0 ),
 
 ];
+List detailsImages=[
+  Images.dImage1,
+  Images.dImage2,
+  Images.dImage3,
+  Images.dImage4,
+  Images.dImage5,
+];
+List detailsText=[
+  "Company's commercial register",
+  "tax reports",
+  "company operating permits",
+  "company legal Documents",
+];

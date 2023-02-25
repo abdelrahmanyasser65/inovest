@@ -124,4 +124,11 @@ class Strings{
   static const forA="k for a";
   static const stake="% Stake";
   static const moreDe="More Details";
+
+  //details
+  static const details="Details";
+  static const apply ="Apply now";
+  static const workPlanD="The summary is placed at the beginning of the market plan, and it should not be more than three pages long. The short version allows investors to find a particular section of the plan quickly without reading the entire report. The summary gives short descriptive details of each section in the plan. Important details about the purpose, direction and funding of a marketing project is found in the marketing summary.";
+  static const moreImage="More Image";
+
 }
